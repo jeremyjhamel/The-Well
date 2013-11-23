@@ -1,0 +1,76 @@
+section[role=main]{
+	margin:20px;
+
+	@include clearfix;
+
+
+  .content-full, .content-left, .content-half, .content-split, .content-split-sm, .sidebar{
+    margin:20px 0;
+    width:100%;
+    @include clearfix;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  section[role=main]{
+    .content-left{
+    	float:left;
+    	width:60%;
+    }
+    .content-half{
+      float:left;
+      width:45%;
+
+      &.right{
+        float:right;
+      }
+    }
+
+    .content-split{
+      float:right;
+      width:55%;
+    }
+
+    .content-split-sm{
+      float:left;
+      width:35%;
+    }
+
+    .sidebar{
+    	float:right;
+    	width:30%;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  section[role=main]{
+    .content-left{
+    	width:65%;
+    }
+
+    .sidebar{
+    	width:25%;
+    }
+
+    .content-split{
+      float:right;
+      width:60%;
+    }
+
+    .content-split-sm{
+      float:left;
+      width:30%;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  section[role=main]{
+    margin:40px auto 20px auto;
+  }
+}

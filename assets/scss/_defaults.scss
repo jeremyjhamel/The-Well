@@ -1,0 +1,53 @@
+/* Primary Styles */
+
+body{
+	position:relative;
+	overflow:hidden;
+	@include body_background;
+	@include clearfix;
+}
+
+body, button, input, select, textarea {
+	color:$brown;
+	font-family:$default_font_family;
+}
+
+hr {
+	background:$brown;
+	border:0;
+	border-top:1px solid $red;
+	display:block;
+	height:1px;
+	margin:1em 0;
+	padding:0;
+}
+
+div.wrapper, section[role=main]{
+	margin:0 auto;
+
+  @include clearfix;
+}
+
+section[role=main]{
+	font-size:1.8em;
+	z-index:1;
+
+    .content-left, .content-full{
+        h1, h2, h3, h4, h5, h6{
+            margin:0.25em 0;
+        }
+    }
+}
+
+div#body{
+    width:100%;
+    @include transition(all 0.2s ease);
+}
+
+
+@media only screen and (min-width: 1024px) {
+    div.wrapper,section[role=main]{
+        margin:0 auto;
+        width:1000px;
+    }
+}

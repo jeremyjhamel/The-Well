@@ -1,0 +1,37 @@
+/*
+	built with SASS
+*/
+
+@import 'reset';
+@import 'font-awesome/font-awesome';
+@import 'bourbon/bourbon';
+
+$brown:#4a3125;
+$red:#893f20;
+$gold:#b3ab6a;
+
+$white:#f1f1f1;
+
+$default_font_family: "proxima-nova",sans-serif;
+$slab_font_family: "museo-slab",serif;
+
+
+@mixin body_background {
+	background:$white url(../images/bkgrd.png) repeat 0 0;
+}
+
+
+@import 'helper';
+
+@import 'base';
+@import 'defaults';
+@import 'no-js';
+
+@import 'header';
+@import 'navigation';
+@import 'footer';
+
+@import 'home';
+@import 'interior';
+
+@import 'print';
