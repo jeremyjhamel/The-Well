@@ -11,13 +11,14 @@ $red:#893f20;
 $gold:#b3ab6a;
 
 $white:#f1f1f1;
+$white_rgba:rgba(255, 255, 255, 0.9);
 
 $default_font_family: "proxima-nova",sans-serif;
 $slab_font_family: "museo-slab",serif;
 
 
 @mixin body_background {
-	background:$white url(../images/bkgrd.png) repeat 0 0;
+	background:$white url(../images/bkgrd.jpg) repeat 0 0;
 }
 
 
@@ -35,3 +36,5 @@ $slab_font_family: "museo-slab",serif;
 @import 'interior';
 
 @import 'print';
+
+@import 'temp';

@@ -1,10 +1,11 @@
-div.mobile-nav{
-
-
-}
-
 header[role=banner]{
+	background:$white_rgba;
+	padding:10px;
 
+	.logo{
+		display:block;
+		width:224px;
+	}
 }
 
 
