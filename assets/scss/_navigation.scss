@@ -3,6 +3,8 @@ header[role=banner]{
 		clear:both;
 		display:none;
 		padding:20px 0 0 0;
+		position:relative;
+		z-index:2;
 
 		@include transition (height 1.0s ease);
 
@@ -31,6 +33,17 @@ header[role=banner]{
 					i{
 						float:right;
 					}
+
+					.triangle{
+						bottom:-11px;
+						display:none;
+						left:50%;
+						margin-left:-10px;
+						padding:0;
+						position:absolute;
+
+						@include triangle(20px, $red, up);
+					}
 				}
 
 				ul{
@@ -46,8 +59,18 @@ header[role=banner]{
 					}
 				}
 
-				&.active ul{
-					display:block;
+				&.active{
+					a{
+						background:$brown_light;
+						border-top:1px solid $white;
+					}
+					ul{
+						display:block;
+
+						a:hover{
+							background:$white;
+						}
+					}
 				}
 			}
 		}
@@ -71,18 +94,50 @@ header[role=banner]{
 					display:inline-block;
 
 					a{
-						border-top:0 none;
+						border:0 none;
 						border-radius:5px;
 						font-size:1.4em;
 						line-height:30px;
+
+						&:hover{
+							border:0 none;
+						}
 
 						i{
 							display:none;
 						}
 					}
 
-					ul{
-						display:none;
+					&.active{
+						a{
+							border:0 none;
+						}
+
+						.triangle{
+							display:block;
+						}
+
+						ul{
+							display:none;
+						}
+					}
+				}
+			}
+
+			.fancy-nav{
+				background:$red;
+				position:absolute;
+				right:0;
+				top:61px;
+				width:450px;
+
+				&.active{
+					display:block;
+				}
+
+				ul{
+					li{
+						display:block;
 					}
 				}
 			}
@@ -102,6 +157,9 @@ header[role=banner]{
 	header[role=banner]{
 		nav{
 
+			.fancy-nav{
+				top:86px;
+			}
 		}
 	}
 }

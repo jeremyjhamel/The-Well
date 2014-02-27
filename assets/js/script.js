@@ -31,10 +31,10 @@
 			if ($(window).width() > 767)
 				fancyNav = true;
 
-			if(!obj.children('ul').length && obj.data('nav') != 'search')
+			if(!obj.children('ul').length)
 				return;
 
-      //obj.parent('ul').children('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+      obj.parent('ul').children('li').find('a i').removeClass('fa-chevron-down').addClass('fa-chevron-right');
 
 			if(obj.hasClass('active')){
         obj.removeClass('active');
@@ -42,7 +42,7 @@
 				return false;
 			}
       obj.parent('ul').children('li').removeClass('active');
-			//obj.addClass('active fa-chevron-up').removeClass('fa-chevron-down');
+			obj.children('a').find('i').addClass('fa-chevron-down').removeClass('fa-chevron-right');
       obj.addClass('active');
 			$('.fancy-nav').removeClass('active');
 
@@ -80,20 +80,6 @@
 			e.stopPropagation();
 			$(e.target).parents('form').submit();
 			return false;
-		});
-
-		$('a.share-twitter').click(function(e){
-		  e.preventDefault();
-		  var loc = $(this).attr('href');
-		  var title  = escape($(this).data('title'));
-		  window.open('http://twitter.com/share?url=' + loc + '&text=' + title + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-		});
-
-		$('a.share-facebook').click(function(e){
-		  e.preventDefault();
-		  var loc = $(this).attr('href');
-		  var title  = escape($(this).data('title'));
-		  window.open('https://www.facebook.com/sharer/sharer.php?u=' + loc + '&', 'facebookwindow', 'height=626, width=436, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 		});
   });
 })(jQuery);
