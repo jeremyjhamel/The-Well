@@ -1,0 +1,94 @@
+#hero{
+  height:$hero_height;
+  left:0;
+  position:absolute;
+  top:70px;
+  width:100%;
+  z-index:1;
+
+  .slide{
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:$hero_height;
+    position:relative;
+    width:100%;
+
+    .wrapper{
+      height:100%;
+      width:100%;
+    }
+
+    a{
+      bottom:20px;
+      position:absolute;
+      right:20px;
+
+      span{
+        background:$red_rgba;
+        clear:both;
+        color:$white;
+        display:inline-block;
+        float:right;
+        font-family:$slab_font_family;
+        font-size:2.6em;
+        line-height:35px;
+        padding:0 5px;
+      }
+
+      &:hover{
+        span{
+          background:saturate($red_rgba, 20%);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  #hero{
+    height:$hero_height_1;
+    top:0;
+
+    .slide{
+      height:$hero_height_1;
+
+      a{
+        bottom:60px;
+        right:60px;
+
+        span{
+          font-size:3em;
+          line-height:45px;
+          padding:0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #hero{
+    height:$hero_height_2;
+    .slide{
+      height:$hero_height_2;
+
+      .wrapper{
+        height:100%;
+        width:1000px;
+      }
+
+      a{
+        bottom:100px;
+        right:0;
+
+        span{
+          font-size:4em;
+          line-height:60px;
+          padding:0 20px;
+        }
+      }
+    }
+  }
+}

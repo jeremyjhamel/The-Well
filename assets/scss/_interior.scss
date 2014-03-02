@@ -8,6 +8,10 @@ section[role=main]{
     margin:20px 0;
     width:100%;
     @include clearfix;
+
+    img{
+      max-width:100%;
+    }
   }
 
 }

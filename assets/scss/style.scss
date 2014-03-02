@@ -9,14 +9,22 @@
 $brown:#4a3125;
 $brown_medium:#6e5a51;
 $brown_light:tint($brown, 80%);
-$red:#893f20;
+
+$red:rgb(137, 63, 32);
+$red_rgba:rgba(137, 63, 32, 0.8);
+
 $gold:#b3ab6a;
 
 $white:#f1f1f1;
-$white_rgba:rgba(255, 255, 255, 0.9);
+$white_rgba:rgba(255, 255, 255, 0.95);
 
 $default_font_family: "proxima-nova",sans-serif;
 $slab_font_family: "museo-slab",serif;
+
+$hero_height_header:370px;
+$hero_height:300px;
+$hero_height_1:500px;
+$hero_height_2:700px;
 
 
 @mixin body_background {
@@ -36,5 +44,7 @@ $slab_font_family: "museo-slab",serif;
 
 @import 'home';
 @import 'interior';
+
+@import 'hero';
 
 @import 'print';

@@ -1,18 +1,25 @@
 header[role=banner]{
-	background:$white_rgba;
-  border-bottom:1px solid $brown_light;
-  border-top:5px solid $red;
-  /*box-shadow: 0 0 10px 2px rgba(0,0,0,0.25);*/
-	padding:10px 20px;
-  position:relative;
+  height:$hero_height_header;
+  position:static;
   z-index:10;
 
   @include clearfix;
 
+  .content{
+    background:$white_rgba;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    padding:0 20px;
+    position:relative;
+    z-index:2;
+
+    @include clearfix;
+  }
+
 	.logo{
 		display:inline-block;
     float:left;
-		height:50px;
+		height:70px;
+    padding:10px 0;
 
     img{
       height:100%;
@@ -23,7 +30,7 @@ header[role=banner]{
   a.navbar-toggle{
     float:right;
     font-size:3em;
-    line-height:50px;
+    line-height:70px;
   }
 }
 
@@ -35,6 +42,13 @@ header[role=banner]{
 
 @media only screen and (min-width: 768px) {
   header[role=banner]{
+    height:$hero_height_1;
+
+    .content{
+      border-radius:5px;
+      margin:40px auto 0 auto;
+      width:90%;
+    }
 
     a.navbar-toggle{
       display:none;
@@ -44,8 +58,14 @@ header[role=banner]{
 
 @media only screen and (min-width: 1024px) {
   header[role=banner]{
+    height:$hero_height_2;
+
+    .content{
+      width:1000px;
+    }
+
     .logo{
-      height:75px;
+      height:95px;
     }
   }
 }

@@ -2,21 +2,6 @@
 
 (function($){
 	$(document).ready(function() {
-
-		$(window).bind('resize orientationchange',function(){
-			if($('#hero')){
-				$('#hero').height($('#hero .slide:first img').height());
-			}
-			if($('#hero').height() == 0){
-				$('#hero').height($('#hero .slide:last img').height());
-			}
-		});
-
-		$('#hero').onImagesLoad(function(){
-			$('#hero').height($('#hero .slide img').height());
-		});
-
-
 		$('a.navbar-toggle').click(function(){
 			$('header[role=banner] nav').toggleClass('active');
 			return false;

@@ -2,7 +2,8 @@ header[role=banner]{
 	nav{
 		clear:both;
 		display:none;
-		padding:20px 0 0 0;
+		font-family:$slab_font_family;
+		padding:30px 0 10px 0;
 		position:relative;
 		z-index:2;
 
@@ -16,7 +17,7 @@ header[role=banner]{
 			li{
 				a{
 					border-top:1px solid $brown_light;
-					color:$brown;
+					color:$brown_medium;
 					display:block;
 					font-size:1.8em;
 					padding:10px 20px;
@@ -35,14 +36,14 @@ header[role=banner]{
 					}
 
 					.triangle{
-						bottom:-11px;
+						bottom:-21px;
 						display:none;
 						left:50%;
 						margin-left:-10px;
 						padding:0;
 						position:absolute;
 
-						@include triangle(20px, $red, up);
+						@include triangle(20px, $brown_light, up);
 					}
 				}
 
@@ -94,13 +95,27 @@ header[role=banner]{
 					display:inline-block;
 
 					a{
+						background:none;
 						border:0 none;
-						border-radius:5px;
-						font-size:1.4em;
-						line-height:30px;
+						border-bottom:5px solid transparent;
+						font-size:1.6em;
+						line-height:25px;
+						padding:20px;
 
 						&:hover{
-							border:0 none;
+							background:none;
+							border-color:$red;
+							color:$red;
+						}
+
+						&.current, &.currentParent{
+							background:none;
+							border-color:transparent;
+							color:$gold;
+
+							&:hover{
+								border-color:$gold;
+							}
 						}
 
 						i{
@@ -110,7 +125,14 @@ header[role=banner]{
 
 					&.active{
 						a{
-							border:0 none;
+							background:none;
+							border-color:$red;
+							border-top:0 none;
+							color:$red;
+
+							&.current, &.currentParent{
+								border-color:$gold;
+							}
 						}
 
 						.triangle{
@@ -125,10 +147,10 @@ header[role=banner]{
 			}
 
 			.fancy-nav{
-				background:$red;
+				background:$brown_light;
 				position:absolute;
 				right:0;
-				top:61px;
+				top:70px;
 				width:450px;
 
 				&.active{
@@ -156,9 +178,15 @@ header[role=banner]{
 @media only screen and (min-width: 1024px) {
 	header[role=banner]{
 		nav{
-
+			ul{
+				li{
+					a{
+						line-height:50px;
+					}
+				}
+			}
 			.fancy-nav{
-				top:86px;
+				top:95px;
 			}
 		}
 	}
