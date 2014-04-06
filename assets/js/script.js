@@ -66,5 +66,35 @@
 			$(e.target).parents('form').submit();
 			return false;
 		});
+
+	  $('.instagram ul').on('didLoadInstagram', didLoadInstagram);
+
+		$(".instagram ul").instagram({
+			userId: '1007015116',
+			accessToken: '253802488.f45c789.c14edd5402d1402b93714fc2e4eea01b',
+			count: 4
+		});
   });
 })(jQuery);
+
+function createPhotoElement(photo) {
+  var innerHtml = $('<img>')
+    .attr('src', photo.images.low_resolution.url);
+
+  innerHtml = $('<a>')
+    .attr('target', '_blank')
+    .attr('href', photo.link)
+    .append(innerHtml);
+
+  return $('<li>')
+    .attr('id', photo.id)
+    .append(innerHtml);
+}
+
+function didLoadInstagram(event, response) {
+  var that = this;
+
+  $.each(response.data, function(i, photo) {
+    $(that).append(createPhotoElement(photo));
+  });
+}
