@@ -3,15 +3,42 @@ section[role=main]{
 
 	@include clearfix;
 
+  &.page{
+    background:$gold;
+    margin:20px 20px 0 20px;
+  }
+
+  &.home{
+    .content-half{
+      margin:20px 0;
+    }
+  }
+
 
   .content-full, .content-left, .content-half, .content-split, .content-split-sm, .sidebar{
-    margin:20px 0;
     width:100%;
     @include clearfix;
 
     img{
       max-width:100%;
     }
+
+    &.breadcrumb{
+      background:$brown;
+      border-radius:5px 5px 0 0;
+      color:$gold;
+      margin:0;
+      padding:20px;
+
+      a{
+        color:$red;
+      }
+    }
+  }
+
+  .content-left{
+    background:$white;
+    padding:10px;
   }
 
 }
@@ -53,6 +80,7 @@ section[role=main]{
 @media only screen and (min-width: 800px) {
   section[role=main]{
     .content-left{
+      padding:20px;
     	width:65%;
     }
 
@@ -75,6 +103,14 @@ section[role=main]{
 
 @media only screen and (min-width: 1024px) {
   section[role=main]{
-    margin:40px auto 20px auto;
+    margin:0 auto;
+
+    &.page{
+      margin:0 auto;
+    }
+
+    &.home{
+      margin:40px auto 20px auto;
+    }
   }
 }

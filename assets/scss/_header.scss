@@ -32,6 +32,24 @@ header[role=banner]{
     font-size:3em;
     line-height:70px;
   }
+
+  .background{
+    height:$hero_height;
+    left:0;
+    position:absolute;
+    top:70px;
+    width:100%;
+    z-index:1;
+
+    div{
+      background-position:center center;
+      background-repeat:no-repeat;
+      background-size:cover;
+      height:100%;
+      width:100%;
+    }
+
+  }
 }
 
 
@@ -41,31 +59,36 @@ header[role=banner]{
 }
 
 @media only screen and (min-width: 768px) {
-  header[role=banner]{
+  #home header[role=banner]{
     height:$hero_height_1;
+  }
 
-    .content{
-      border-radius:5px;
-      margin:40px auto 0 auto;
-      width:90%;
-    }
+  header[role=banner]{
 
     a.navbar-toggle{
       display:none;
+    }
+
+    .background{
+      height:$hero_height_1;
+      top:0;
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  header[role=banner]{
+  #home header[role=banner]{
     height:$hero_height_2;
+  }
 
-    .content{
-      width:1000px;
-    }
+  header[role=banner]{
 
     .logo{
       height:95px;
+    }
+
+    .background{
+      height:$hero_height_2;
     }
   }
 }
