@@ -1,4 +1,14 @@
 .instagram{
+  padding:10px 0;
+
+  a.logo-instagram{
+    display:inline-block;
+    text-align:center;
+
+    img{
+      max-width:100%;
+    }
+  }
 
   ul{
     list-style:none;
@@ -21,21 +31,35 @@
   }
 }
 
+@media only screen and (min-width:600px) {
+  .instagram{
+    clear:both;
+
+    a.logo-instagram{
+      img{
+        max-width:50%;
+      }
+    }
+
+    ul{
+      li{
+        width:25%;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .instagram{
+    clear:none;
     float:right;
+    padding:20px 0 0 0;
     width:30%;
 
     ul{
 
       li{
-
-        a{
-
-          img{
-
-          }
-        }
+        width:50%;
       }
     }
   }

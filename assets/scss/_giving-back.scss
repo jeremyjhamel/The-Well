@@ -1,0 +1,27 @@
+.giving-back{
+  list-style:none;
+  margin:0;
+  padding:0;
+
+  li{
+    display:inline-block;
+    padding:10px;
+    width:49%;
+
+    a{
+      display:block;
+
+      img{
+        max-width:100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .giving-back{
+    li{
+      width:32%;
+    }
+  }
+}

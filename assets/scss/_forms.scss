@@ -1,9 +1,244 @@
-form{
+div.error{
+  background:$red;
+  border-radius:5px;
+  color:$white;
+  padding:20px;
+}
 
+form{
+  &.label-block{
+    input[type=text], textarea{
+      margin:0;
+    }
+    input[type=submit], label.block{
+      margin:20px 0 0 0;
+    }
+  }
+
+  label.block{
+    display:block;
+    font-size:1.5em;
+    text-transform:uppercase;
+  }
+  input[type=text], textarea{
+    background:$brown;
+    border:0 none;
+    border-radius:2px;
+    color:$white;
+    font-size:2em;
+    margin:0 0 20px 0;
+    padding:5px 10px;
+    width:100%;
+
+    @include box-sizing(border-box);
+
+    @include placeholder {
+      color:$gold;
+    }
+  }
+
+  input[type=radio]{
+    margin:0 10px 0 0;
+  }
+
+  textarea{
+    font-size:1em;
+    height:150px;
+    resize:none;
+  }
+
+  input[type=submit], a.button{
+    background:$red;
+    border:0 none;
+    border-radius:2px;
+    color:$white;
+    font-size:2em;
+    padding:5px 0;
+    text-align:center;
+    width:100%;
+
+    &.white{
+      background:$white;
+      color:$red;
+    }
+
+    &:hover{
+      background:$gold;
+    }
+  }
+}
+
+.slide-out{
+  background:$red;
+  color:$white;
+  display:none;
+  margin:20px 0;
+  padding:20px;
+  position:relative;
+
+  h1, h2, h3, h4, h5, h6{
+    color:$white;
+  }
+
+  .initial{
+    display:block;
+  }
+
+  .followup{
+    .success, .error{
+      display:none;
+    }
+
+    &.success{
+      .success{
+        display:block;
+      }
+    }
+    &.error{
+      .error{
+        display:block;
+      }
+    }
+
+    a{
+      color:$white;
+      text-decoration:underline;
+    }
+  }
+
+  a.close{
+    background:$brown;
+    border-radius:15px;
+    color:$white;
+    padding:3px 10px;
+    position:absolute;
+    right:-10px;
+    top:-10px;
+
+    &:hover{
+      background:$brown;
+    }
+  }
+
+  label{
+    display:block;
+  }
+  input[type=text], textarea{
+    background:$white;
+    border:0 none;
+    border-radius:2px;
+    color:$red;
+    font-size:2em;
+    margin:0 0 20px 0;
+    padding:5px 10px;
+    width:100%;
+
+    @include box-sizing(border-box);
+
+    @include placeholder {
+      color:$brown;
+    }
+  }
+
+  textarea{
+    font-size:1em;
+    height:75px;
+    resize:none;
+  }
+
+  input[type=submit]{
+    background:$red;
+    width:100%;
+
+    &:hover{
+      background:$gold;
+    }
+  }
+}
+
+form.login{
+  background:rgba(255, 255, 255, 0.6);
+  border-top:5px solid $red;
+  font-size:1.6em;
+  padding:20px;
+  width:100%;
+
+  @include box-sizing(border-box);
+
+  div.row{
+    display:table;
+    margin:10px 0;
+    width:100%;
+
+    label{
+      background:$red;
+      border-radius:5px 0 0 5px;
+      color:$white;
+      display:table-cell;
+      text-align:center;
+      width:15%;
+    }
+
+    span{
+      display:table-cell;
+      width:85%;
+
+      &.password{
+        width:70%;
+      }
+    }
+
+    input[type=text]{
+      background:$white;
+      border:0 none;
+      border-radius:0 5px 5px 0;
+      color:$brown;
+      font-size:1em;
+      margin:0;
+      padding:0;
+      text-align:center;
+      width:100%;
+    }
+
+    input[type=password]{
+      border:0 none;
+      color:$brown;
+      text-align:center;
+      width:100%;
+
+      @include placeholder {
+        color:$red;
+      }
+    }
+
+    a.submit{
+      background:$red;
+      border-radius:0 5px 5px 0;
+      color:$white;
+      display:table-cell;
+      text-align:center;
+      width:15%;
+    }
+  }
 }
 
 
-
 @media only screen and (min-width: 500px) {
+  form.login{
+    margin:0 auto;
+    width:500px;
 
+    div.row{
+      label{
+        width:10%;
+      }
+      span{
+        width:90%;
+
+        &.password{
+          width:75%;
+        }
+      }
+    }
+  }
 }

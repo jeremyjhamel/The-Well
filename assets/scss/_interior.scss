@@ -4,7 +4,6 @@ section[role=main]{
 	@include clearfix;
 
   &.page{
-    background:$gold;
     margin:20px 20px 0 20px;
   }
 
@@ -14,8 +13,14 @@ section[role=main]{
     }
   }
 
+  .main-background{
+    background:$gold;
 
-  .content-full, .content-left, .content-half, .content-split, .content-split-sm, .sidebar{
+    @include clearfix;
+  }
+
+
+  .content-full, .content-left, .content-right, .content-half, .content-split, .content-split-sm, .sidebar{
     width:100%;
     @include clearfix;
 
@@ -28,10 +33,14 @@ section[role=main]{
       border-radius:5px 5px 0 0;
       color:$gold;
       margin:0;
-      padding:20px;
+      padding:10px 20px;
 
       a{
-        color:$red;
+        color:lighten($brown, 10%);
+
+        &:hover{
+          color:$red;
+        }
       }
     }
   }
@@ -39,6 +48,62 @@ section[role=main]{
   .content-left{
     background:$white;
     padding:10px;
+  }
+
+  .content-right{
+    padding:10px;
+  }
+
+  .breadcrumb-trail{
+    line-height:25px;
+  }
+
+  .social{
+    list-style:none;
+    margin:10px 0 0 0;
+    padding:0;
+
+    li{
+      display:inline-block;
+      font-weight:bold;
+      line-height:25px;
+      margin:0 15px 0 0;
+      text-transform:uppercase;
+    }
+  }
+
+  .sidebar{
+    h5{
+      margin-bottom:0;
+
+      i, em{
+        width:30px;
+      }
+    }
+
+    p{
+      margin-top:0;
+
+      &.indent{
+        margin-left:30px;
+      }
+    }
+
+    ul.hours{
+      font-size:0.8em;
+      list-style:none;
+      margin:0 0 0 30px;
+      padding:0;
+
+      strong, b{
+        font-size:1.2em;
+        text-transform:uppercase;
+      }
+    }
+
+    .giving-back-logo img{
+      max-width:60%;
+    }
   }
 
 }
@@ -50,6 +115,10 @@ section[role=main]{
     .content-left{
     	float:left;
     	width:60%;
+    }
+    .content-right{
+      float:right;
+      width:40%;
     }
     .content-half{
       float:left;
@@ -70,9 +139,33 @@ section[role=main]{
       width:35%;
     }
 
-    .sidebar{
-    	float:right;
-    	width:35%;
+    .breadcrumb-trail{
+      float:left;
+      line-height:35px;
+    }
+    .social{
+      float:right;
+      font-size:1.4em;
+      margin:0;
+
+      li{
+        line-height:35px;
+      }
+    }
+
+    &.page{
+      display:table;
+
+      .content-left{
+        display:table-cell;
+        float:none;
+        width:60%;
+      }
+      .content-right{
+        display:table-cell;
+        float:none;
+        width:40%;
+      }
     }
   }
 }
@@ -83,9 +176,9 @@ section[role=main]{
       padding:20px;
     	width:65%;
     }
-
-    .sidebar{
-    	width:30%;
+    .content-right{
+      padding:20px;
+      width:35%;
     }
 
     .content-split{
