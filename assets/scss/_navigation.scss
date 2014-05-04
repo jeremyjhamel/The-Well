@@ -31,7 +31,7 @@ header[role=banner]{
 						color:$white;
 					}
 
-					i{
+					i.marker{
 						float:right;
 					}
 
@@ -110,15 +110,11 @@ header[role=banner]{
 
 						&.current, &.currentParent{
 							background:none;
-							border-color:transparent;
+							border-color:$gold;
 							color:$gold;
-
-							&:hover{
-								border-color:$gold;
-							}
 						}
 
-						i{
+						i.marker{
 							display:none;
 						}
 					}
@@ -132,6 +128,7 @@ header[role=banner]{
 
 							&.current, &.currentParent{
 								border-color:$gold;
+								color:$gold;
 							}
 						}
 
@@ -160,6 +157,19 @@ header[role=banner]{
 				ul{
 					li{
 						display:block;
+
+						a{
+							border-bottom:1px solid $white;
+							line-height:1;
+
+							&:hover{
+								background:$white;
+							}
+						}
+
+						i{
+							display:none;
+						}
 					}
 				}
 			}
