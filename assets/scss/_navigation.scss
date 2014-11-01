@@ -34,17 +34,6 @@ header[role=banner]{
 					i.marker{
 						float:right;
 					}
-
-					.triangle{
-						bottom:-21px;
-						display:none;
-						left:50%;
-						margin-left:-10px;
-						padding:0;
-						position:absolute;
-
-						@include triangle(20px, $brown_light, up);
-					}
 				}
 
 				ul{
@@ -108,6 +97,10 @@ header[role=banner]{
 							color:$red;
 						}
 
+						&.social{
+							padding:20px 10px;
+						}
+
 						&.current, &.currentParent{
 							background:none;
 							border-color:$gold;
@@ -132,10 +125,6 @@ header[role=banner]{
 							}
 						}
 
-						.triangle{
-							display:block;
-						}
-
 						ul{
 							display:none;
 						}
@@ -148,7 +137,7 @@ header[role=banner]{
 				position:absolute;
 				right:0;
 				top:70px;
-				width:450px;
+				width:500px;
 
 				&.active{
 					display:block;

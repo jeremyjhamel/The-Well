@@ -45,7 +45,6 @@ header[role=banner]{
       background-position:center center;
       background-repeat:no-repeat;
       background-size:cover;
-      box-shadow:inset 0 -25px 20px 0 rgba(255,255,255,0.75);
       height:100%;
       width:100%;
     }
@@ -65,14 +64,14 @@ header[role=banner]{
   }
 
   header[role=banner]{
+    height:$hero_height;
 
     a.navbar-toggle{
       display:none;
     }
 
     .background{
-      height:$hero_height_1;
-      top:0;
+      height:$hero_height;
     }
   }
 }
@@ -83,13 +82,15 @@ header[role=banner]{
   }
 
   header[role=banner]{
+    height:$hero_height_1;
 
     .logo{
       height:95px;
     }
 
     .background{
-      height:$hero_height_2;
+      height:$hero_height_1;
+      top:95px;
     }
   }
 }
