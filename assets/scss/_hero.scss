@@ -1,8 +1,5 @@
 #hero{
-  height:$hero_height;
-  left:0;
-  position:absolute;
-  top:70px;
+  position:relative;
   width:100%;
   z-index:1;
 
@@ -10,7 +7,7 @@
     background-position:center center;
     background-repeat:no-repeat;
     background-size:cover;
-    height:$hero_height;
+    height:100%;
     position:relative;
     width:100%;
 
@@ -20,6 +17,12 @@
     }
 
     a{
+      display:block;
+      height:100%;
+      width:100%;
+    }
+
+    .hero-text{
       bottom:20px;
       position:absolute;
       right:20px;
@@ -48,13 +51,11 @@
 
 @media only screen and (min-width: 768px) {
   #hero{
-    height:$hero_height_1;
-    top:0;
+    margin-top:-70px;
 
     .slide{
-      height:$hero_height_1;
 
-      a{
+      .hero-text{
         bottom:60px;
         right:60px;
 
@@ -70,16 +71,16 @@
 
 @media only screen and (min-width: 1024px) {
   #hero{
-    height:$hero_height_2;
+    margin-top:-95px;
+
     .slide{
-      height:$hero_height_2;
 
       .wrapper{
         height:100%;
         width:1000px;
       }
 
-      a{
+      .hero-text{
         bottom:100px;
         right:0;
 
