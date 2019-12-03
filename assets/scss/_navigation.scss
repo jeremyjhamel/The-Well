@@ -89,7 +89,7 @@ header[role=banner]{
 						border-bottom:5px solid transparent;
 						font-size:1.6em;
 						line-height:25px;
-						padding:20px;
+						padding:20px 15px;
 
 						&:hover{
 							background:none;
@@ -137,7 +137,7 @@ header[role=banner]{
 				position:absolute;
 				right:0;
 				top:70px;
-				width:500px;
+				width:580px;
 
 				&.active{
 					display:block;
